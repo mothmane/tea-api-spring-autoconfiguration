@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.othmane.TeaAutoConfiguration
+
+org.springframework.boot.diagnostics.FailureAnalyzer=com.othmane.InvalidTeaCombinationFailureAnalyzer

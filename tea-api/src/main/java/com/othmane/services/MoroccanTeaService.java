@@ -1,22 +1,31 @@
 package com.othmane.services;
 
 
+import com.othmane.services.exceptions.InvalidTeaCombinationException;
+
 public class MoroccanTeaService implements TeaService {
 
-    private String type="Green";
+    private String type = "Green";
 
-    private Temperature temperature=Temperature.HOT;
+    private Temperature temperature = Temperature.HOT;
 
     // Not Used but it's a moroccan tea
-    private boolean ne3na3=true;
+    private boolean ne3na3 = true;
 
     public MoroccanTeaService() {
-
     }
 
-    public MoroccanTeaService(String type,Temperature temperature){
-        this.type=type;
-        this.temperature=temperature;
+    public MoroccanTeaService(String type, Temperature temperature) {
+        this.checkValues(type,temperature);
+        this.type = type;
+        this.temperature = temperature;
+    }
+
+    public void checkValues(String type, Temperature temperature){
+
+        if("Black".equalsIgnoreCase(type) && Temperature.COLD==temperature){
+            throw new InvalidTeaCombinationException(type,temperature);
+        }
     }
 
     public void setType(String type) {
@@ -32,9 +41,8 @@ public class MoroccanTeaService implements TeaService {
     }
 
     public String drink() {
-        return "i'm drinking this beautifull "+type+" moroccan "+temperature+" tea";
+        return "i'm drinking this beautifull " + type + " moroccan " + temperature + " tea";
     }
-
 
 
 }

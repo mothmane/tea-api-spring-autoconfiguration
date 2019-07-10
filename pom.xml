@@ -21,6 +21,8 @@
     <modules>
         <module>tea-api</module>
         <module>tea-app</module>
+        <module>tea-starter</module>
+        <module>tea-autoconfiguration</module>
     </modules>
 
 

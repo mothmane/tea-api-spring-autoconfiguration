@@ -9,14 +9,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>tea-app</artifactId>
+    <artifactId>tea-autoconfiguration</artifactId>
+
 
     <dependencies>
-
         <dependency>
             <groupId>com.othmane</groupId>
-            <artifactId>tea-starter</artifactId>
+            <artifactId>tea-api</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
     </dependencies>
 
